@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<!-- 
+
+  /* Recepción de datos */
+  cout << "Ingrese el costo de una orden: "; cin >> costoOrden;
+  cout << "Ingrese la demanda anual del producto: "; cin >> demandaAnual;
+  cout << "Ingrese la tasa de mantener una unidad de inventario (%): "; cin >> tasaInventarioU;
+  cout << "Ingrese el costo de una unidad de inventario: "; cin >> costoInventarioU;
+  cout << "Ingrese el tiempo laborable (anual): "; cin >> diasLaborables;
+  cout << "Ingrese el tiempo de espera: "; cin >> diasEspera;
+ -->
+
+<body class="bg-gray-100">
+  <h1 class="font-bold text-4xl text-center my-8">Modelo EOQ</h1>
+  <div class="grid md:grid-cols-2 mx-10 gap-8">
+    <form id="formulario" action="" class="flex flex-col gap-y-2 shadow-lg p-5 bg-white">
+      <span class="font-bold text-center">Ingresar datos</span>
+      <div class="flex flex-col">
+        <label for="">Costo de una orden</label>
+        <input id="costoOrden" class="bg-gray-100 py-1.5 px-2 rounded" type="number" step="0.01" required>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Demanda anual de producto</label>
+        <input id="demandaAnual" class="bg-gray-100 py-1.5 px-2 rounded" type="number" step="0.01" required>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Tasa de mantener una unidad de inventario (%)</label>
+        <input id="tasaInventarioU" class="bg-gray-100 py-1.5 px-2 rounded" type="number" step="0.01" required>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Costo de una unidad de inventario</label>
+        <input id="costoInventarioU" class="bg-gray-100 py-1.5 px-2 rounded" type="number" step="0.01" required>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Tiempo laborable (anual) en dias</label>
+        <input id="diasLaborables" class="bg-gray-100 py-1.5 px-2 rounded" type="number" required>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Tiempo de espera</label>
+        <input id="diasEspera" class="bg-gray-100 py-1.5 px-2 rounded" type="number" required>
+      </div>
+      <button class="bg-blue-500 py-2 px-5 text-white font-bold text-lg my-3">Calcular</button>
+    </form>
+
+    <div class="flex flex-col shadow-lg p-5 bg-white gap-y-2">
+      <span class="font-bold text-center">Resultados</span>
+      <div class="flex flex-col">
+        <label for="">Cantidad de unidades por pedido (en unidades)</label>
+        <input id="result1" class="bg-gray-100 py-1.5 px-2 rounded" type="text" disabled>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Numero de ordenes por año</label>
+        <input id="result2" class="bg-gray-100 py-1.5 px-2 rounded" type="text" disabled>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Tiempo de ciclo (dias)</label>
+        <input id="result3" class="bg-gray-100 py-1.5 px-2 rounded" type="text" disabled>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Punto de reorden (unidades)</label>
+        <input id="result4" class="bg-gray-100 py-1.5 px-2 rounded" type="text" disabled>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Costo anual de ordenar</label>
+        <input id="result5" class="bg-gray-100 py-1.5 px-2 rounded" type="text" disabled>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Costo anual de mantener el inventario</label>
+        <input id="result6" class="bg-gray-100 py-1.5 px-2 rounded" type="text" disabled>
+      </div>
+      <div class="flex flex-col">
+        <label for="">Costo total anual</label>
+        <input id="result7" class="bg-gray-100 py-1.5 px-2 rounded" type="text" disabled>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
